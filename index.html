@@ -15,11 +15,13 @@
     </head>
     <body id="home">
         <h1>Hello BigchainDB</h1>
+        
         <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#createUserModal">Create User</button>
             <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addFundModal">Add Fund</button>
             <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#transferModal">Transfer</button>
           </div>
+          <div class="col" id="users"></div>
         <div class="list-group" id="blockChain">BlockChain</div>
         <!-- <button onclick="query()">QUERY</button>
         <p>Your transaction id is: <a id="lastTransaction" target="_blank"><em>processing</em></a></p>
@@ -38,12 +40,7 @@
             <div class="modal-body">
                 <form>
                     <div class="row">
-                      <div class="col">
-                        <input type="text" class="form-control" id="first_name" placeholder="First name">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" id="last_name" placeholder="Last name">
-                      </div>
+                        <input type="text" class="form-control" id="username_create" placeholder="username">
                     </div>
                   </form>
             </div>
@@ -69,10 +66,7 @@
                 <form>
                     <div class="row">
                       <div class="col">
-                        <input type="text" class="form-control" id="first_name2" placeholder="First name">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" id="last_name2" placeholder="Last name">
+                        <input type="text" class="form-control" id="username_add" placeholder="Username">
                       </div>
                       <div class="col">
                         <input type="text" class="form-control" id="amount" placeholder="00000.00">
@@ -103,19 +97,13 @@
                     <!-- Sender -->
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" id="first_name_sender" placeholder="First name">
-                        </div>
-                        <div class="col">
-                            <input type="text" class="form-control" id="last_name_sender" placeholder="Last name">
+                            <input type="text" class="form-control" id="sender" placeholder="Sender">
                         </div>
                     </div>
                     <!-- Receiver -->
                     <div class="row">
                       <div class="col">
-                        <input type="text" class="form-control" id="first_name_receiver" placeholder="First name">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" id="last_name_receiver" placeholder="Last name">
+                        <input type="text" class="form-control" id="receiver" placeholder="Receiver">
                       </div>
                     </div>
                       <div class="row">
