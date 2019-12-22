@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>BigchainDB boilerplate</title>
+        <title>Zhi Ji coin</title>
         <!-- Adjust version to your needs -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
         <script src="https://unpkg.com/bigchaindb-driver@4.0.0/dist/browser/bigchaindb-driver.window.min.js"></script>
@@ -14,15 +14,24 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
     <body id="home">
-        <h1>Hello BigchainDB</h1>
-        
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#createUserModal">Create User</button>
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addFundModal">Add Fund</button>
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#transferModal">Transfer</button>
+        <h1 align="center">MyBitCoin</h1>
+        <h5 align="center">Decentralized Digital Currency Exchange Platform Built on BigChainDB 2.0</h5>
+        <div class="row">
+          <div align="center" class="col" >
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#createUserModal">Create User</button>
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addFundModal">Add Fund</button>
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#transferModal">Transfer</button>
+            </div>
+            <div class="container" id="users"></div>
           </div>
-          <div class="col" id="users"></div>
-        <div class="list-group" id="blockChain">BlockChain</div>
+          <div class="col">
+            <div class="list-group" id="blockChain">BlockChain Visualization</div>
+          </div>
+        </div>
+        
+        
+        
         <!-- <button onclick="query()">QUERY</button>
         <p>Your transaction id is: <a id="lastTransaction" target="_blank"><em>processing</em></a></p>
         <p>Your transaction id is: <a id="lastTransaction2" target="_blank"><em>processing</em></a></p> -->
@@ -71,6 +80,27 @@
                       <div class="col">
                         <input type="text" class="form-control" id="amount" placeholder="00000.00">
                       </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label for="exampleInputPassword1"> </label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Credit Card Number">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="inputZip" placeholder="Expire Date MM/YY">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <input type="password" class="form-control" id="inputZip" placeholder="CVV">
+                        </div>
+                      </div>
+                      
                     </div>
                   </form>
             </div>
